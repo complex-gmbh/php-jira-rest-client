@@ -150,7 +150,7 @@ class IssueField implements \JsonSerializable
         return $this->customFields;
     }
 
-    public function addCustomField(string $key, string|int|float|array $value): static
+    public function addCustomField(string $key, null|string|int|float|array $value): static
     {
         $this->customFields[$key] = $value;
 
@@ -355,7 +355,7 @@ class IssueField implements \JsonSerializable
         return $this;
     }
 
-    public function setParent(Issue $parent): void
+    public function setParent(?Issue $parent): void
     {
         $this->parent = $parent;
     }
